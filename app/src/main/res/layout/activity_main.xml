@@ -5,31 +5,41 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Холст для рисования -->
     <com.example.painting.DrawingView
         android:id="@+id/drawingView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <!-- Контейнер для кнопок -->
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="?attr/actionBarSize"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:background="#CCFFFFFF"
+        android:gravity="center">
 
+        <!-- Кнопка "Clear" -->
         <Button
             android:id="@+id/btnClear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Clear" />
+            android:text="Clear"
+            android:layout_marginEnd="8dp" />
 
+        <!-- Кнопка "Random Color" -->
         <Button
             android:id="@+id/btnRandomColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Random Color" />
+            android:text="Random Color"
+            android:layout_marginEnd="8dp" />
 
+        <!-- Кнопка "Eraser" -->
         <Button
             android:id="@+id/btnEraser"
             android:layout_width="wrap_content"
